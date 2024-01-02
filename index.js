@@ -68,7 +68,7 @@ function objToRBXMeshWrite(stream, robloxMesh, faceCount) {
   stream.write("version " + "1.00" + "\n")
   stream.write(faceCount + "\n")
 
-  for (const [i, vert] of robloxMesh.vertices.entries()) {
+  for (const vert of robloxMesh.vertices) {
     stream.write("[")
     stream.write(vert.vx * scale + ",")
     stream.write(vert.vy * scale + ",")
